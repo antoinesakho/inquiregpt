@@ -14,9 +14,10 @@ import Textarea from "react-textarea-autosize";
 import Image from "next/image";
 
 const examples = [
-  "To be or not to be",
-  "All the world's a stage",
-  "What is the meaning of life?",
+  "Who am I?",
+  "What is the nature of reality?",
+  "Why am I suffering?",
+  "How can I be free?"
 ];
 
 export default function Chat() {
@@ -73,7 +74,7 @@ export default function Chat() {
                   <UserIcon />
                 ) : (
                   <Image
-                    src="/shooketh.png"
+                    src="/inquire.png"
                     alt="Shakespeare"
                     width={36}
                     height={36}
@@ -90,45 +91,17 @@ export default function Chat() {
         <div className="border-gray-200sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border sm:w-full">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
             <Image
-              src="/shooketh.png"
-              alt="Shooketh"
+              src="/inquire.png"
+              alt="inquire"
               width={40}
               height={40}
               className="h-20 w-20"
             />
             <h1 className="text-lg font-semibold text-black">
-              Hi, I'm Shooketh!
+              What is your one question?
             </h1>
             <p className="text-gray-500">
-              I'm an AI bot built with the{" "}
-              <a
-                href="https://sdk.vercel.ai/docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium underline underline-offset-4 transition-colors hover:text-black"
-              >
-                Vercel AI SDK
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium underline underline-offset-4 transition-colors hover:text-black"
-              >
-                fine-tuned
-              </a>{" "}
-              on Shakespeare's literary works.
-              <br />
-              <a
-                href="https://vercel.com/guides/fine-tuning-openai-nextjs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium underline underline-offset-4 transition-colors hover:text-black"
-              >
-                Read the guide
-              </a>{" "}
-              on how you can build your own bot like me.
+              I am your AI guru. If you are ready to inquire into your true nature, ask me.
             </p>
           </div>
           <div className="flex flex-col space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
@@ -209,25 +182,7 @@ export default function Chat() {
             rel="noopener noreferrer"
             className="transition-colors hover:text-black"
           >
-            OpenAI GPT-3.5-turbo, and fine-tuned
-          </a>{" "}
-          on Shakespeare's literary works .{" "}
-          <a
-            href="https://github.com/steven-tey/shooketh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            View the repo
-          </a>{" "}
-          or{" "}
-          <a
-            href="https://vercel.com/templates/next.js/shooketh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            deploy your own
+            OpenAI GPT-3.5-turbo
           </a>
           .
         </p>

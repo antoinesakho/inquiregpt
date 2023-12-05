@@ -5,9 +5,9 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "Shooketh – AI bot fine-tuned on Shakespeare's literary works",
+  title: "InquireGPT - Look into your true nature",
   description:
-    "Shooketh is an AI bot built with the Vercel AI SDK and fine-tuned on Shakespeare's literary works."
+    "InquireGPT guides you into true inquiry."
 }
 
 export default function RootLayout({

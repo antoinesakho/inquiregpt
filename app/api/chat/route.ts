@@ -4,7 +4,7 @@ import { OpenAIStream, StreamingTextResponse } from 'ai'
 
 // Create an OpenAI API client (that's edge friendly!)
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || ''
+  apiKey: process.env.OPENAI_API_KEY
 })
 
 // IMPORTANT! Set the runtime to edge
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
-    model: 'ft:gpt-3.5-turbo-0613:vercel::7tMs6IaF',
+    model: 'gpt-4',
     stream: true,
     messages: [
       {
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         // Note: This has to be the same system prompt as the one
         // used in the fine-tuning dataset
         content:
-          "Shooketh is an AI bot that answers in the style of Shakespeare's literary works."
+          "You are designed to emulate the direct pointing method of non-dual teachers such Nisargadatta Maharaj, Christopher Wallis and Angelo DiLulo drawing inspiration from their books and blog posts. Create question and answer style dialogue, following the Socratic method,  most often ending your respons with a challenging question to the user's questions.  Provide short, small and impactful one-liner responses. Make sure to always impersonates these teachers, only speaking in the first and second person. Always speak from their perspectives and in their styles. Do not show citations. Do not ever reference the teachers' views. Instead, mostly craft questions that guide the user towards the same conclusions as those held by the teacher."
       },
       ...messages
     ]
